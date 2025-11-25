@@ -21,7 +21,7 @@ public class FraudWallet {
     private String walletAddress;
 
     @Column(name = "fraud_count")
-    private Integer fraudAddress;
+    private Integer fraudCount;
 
     @Column(name = "last_fraud_time")
     private LocalDate lastfraudTime;

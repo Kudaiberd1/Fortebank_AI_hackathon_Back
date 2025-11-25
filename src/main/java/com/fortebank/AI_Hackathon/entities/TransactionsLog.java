@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.UUID;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -16,27 +17,22 @@ import java.time.LocalDateTime;
 @Table(name = "transactions_log")
 public class TransactionsLog {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tx_id;
+    private String txId = UUID.randomUUID().toString();
 
     @Column(name = "wallet_address")
     private String walletAddress;
 
     @Column(name = "amaount")
-    private Integer amaount;
+    private Float amaount;
 
     @Column(name = "ml_probability")
     private Float mlProbability;
 
-    @Column(name = "wallet_flag")
-    private Boolean walletFlag;
 
     @Column(name = "system_recommendation")
     @Enumerated(EnumType.STRING)
     private Recommendation systemRecommendation;
 
-    @Column(name = "user_decision")
-    private String userDecision;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;

@@ -14,6 +14,5 @@ public class EvaluateTransactionResponseDto {
 
     private String tx_id;
     private Float mlProbability;
-    private boolean walletFlag;
     private Recommendation systemRecommendation;
 }

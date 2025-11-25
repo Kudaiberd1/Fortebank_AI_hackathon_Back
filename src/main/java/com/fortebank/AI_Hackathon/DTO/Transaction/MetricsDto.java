@@ -9,10 +9,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class EvaluateTransactionRequestDto {
-    private String wallet;
-    private float amount;
-    private String bankId;
-    private DeviceInfoDto deviceInfo;
-    private float threshold;
+public class MetricsDto {
+
+    private float precision;
+    private float recall;
+    private float f1;
+    private float roc_auc;
+    private float current_threshold;
+
 }
